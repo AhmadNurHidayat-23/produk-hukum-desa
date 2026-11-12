@@ -1,0 +1,2 @@
+let csrf='';
+export async function api(path,method='GET',body){const form=body instanceof FormData;const response=await fetch('/api/'+path,{method,headers:{...(form?{}:{'Content-Type':'application/json'}),'X-CSRF-Token':csrf},body:method==='GET'?undefined:form?body:JSON.stringify(body||{})});const data=await response.json();if(!response.ok)throw Error(data.error||'Permintaan gagal.');if(data.csrf)csrf=data.csrf;return data;}
