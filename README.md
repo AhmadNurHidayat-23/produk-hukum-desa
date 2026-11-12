@@ -17,12 +17,14 @@ Python 3.13, Flask, SQLite, pypdf, HTML, CSS, JavaScript.
 
 ~~~powershell
 cd C:\laragon\www\produk-hukum-desa
-py -3.13 -m venv .venv
+& 'C:\laragon\bin\python\python-3.13\python.exe' -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
 .venv\Scripts\python -m core.users --role Admin
 ~~~
 
 Ulangi dengan --role Petugas bila diperlukan. Tidak ada akun bawaan.
+
+Lokasi Python pada perintah instalasi mengikuti Laragon di komputer ini; sesuaikan bila instalasi Python berada di lokasi lain.
 
 ## Cara menjalankan
 
